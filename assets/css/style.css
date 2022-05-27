@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,500;8..144,700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu main"
+    "footer footer";
+    gap: 10px;
+    grid-template-columns: 20% auto ;
+    grid-template-rows: 7% 90% 3%;
+    height: 100vh;
+    background-color: #d3d3d3;
+}
+    
+header{
+    font-size: 25px;
+    grid-area: header;
+    background-color: #0091ea;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h2{
+    font-weight: 500;
+}
+.search{
+    margin-right: 40%;
+}
+.menuh{
+    margin-left: 40%;
+}
+menu{
+    grid-area: menu;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+}
+menu ul{
+    list-style: none;
+}
+menu a{
+    text-decoration: none;
+    color: black;
+}
+menu a strong{
+    font-size: 25px;
+    font-weight: 500;
+}
+menu a span{
+    opacity: 0.3;
+}
+main{
+    
+    grid-area: main;
+    background-color: #d3d3d3;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr; 
+
+}
+main .card:hover{
+    border: 1px solid #f1c40f;
+}
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    align-content: center; 
+  }
+.card-img {
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+  }
+.card-img .lupa{
+    color: gray;
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.card-img .puntos{
+    display: flex;
+    justify-content: center;
+    color: black;
+    align-items: center;
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 10vh; */
+    background-color: white;
+}
+.card-text h6{
+    margin-bottom: 5px;
+    opacity: 0.5;
+}
+.card-text h4{
+    margin-bottom: 5px;
+    font-weight: 700;
+    opacity: 0.5;
+}
+.card-text h3{
+    font-weight: 500;
+}
+.card-text h5 i{
+    color: orange;
+}
+.card-footer button{
+    width: 100%;
+    height: 25px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #0091ea;
+    color: white;
+    font-weight: 700;
+}
+footer{
+    grid-area: footer;
+    background-color: #0091ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer h3{
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    opacity: 0.3;
+}
+
+.card:nth-child(1) .card-img{   background-image: url(/assets/img/camara.jpeg);  }
+.card:nth-child(2) .card-img{   background-image: url(/assets/img/clu.avif);  }
+.card:nth-child(3) .card-img{   background-image: url(/assets/img/audi.avif);  }
+.card:nth-child(4) .card-img{   background-image: url(/assets/img/aceite.avif)  }
+.card:nth-child(5) .card-img{   background-image: url(/assets/img/perfum.avif);  }
+.card:nth-child(6) .card-img{   background-image: url(/assets/img/broch.avif);  }
+
